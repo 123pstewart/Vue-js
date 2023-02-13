@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue tutorial</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1> hello</h1>
+    <div id="app">
+        <p>{{ title }}</p>
+        <p>{{ author }}</p>
+        <p>{{ age }}</p>
+
+        <button v-on:click="age++">increase age</button>
+        <button v-on:click="age--">decrease age</button>
+        <button v-on:click="age = 0">reset age</button>
+        <div @click="title = 'something else'">new title</div>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+</html>
