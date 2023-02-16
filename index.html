@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue tutorial</title>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<style>
+    .box{
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: incline-block;
+    }
+</style>
 </head>
 <body>
     <h1> hello</h1>
@@ -15,17 +25,21 @@
         <p>{{ author }}</p>
         <p>{{ age }}</p>
 </div>
-        <button v-on:click="age++">increase age</button>
+        <!-- <button v-on:click="age++">increase age</button>
         <button v-on:click="age--">decrease age</button>
         <button v-on:click="age = 0">reset age</button>
-        <div @click="changeTitle('Oathbringer')">new title</div>
+        <div @click="changeTitle('Oathbringer')">new title</div> -->
 
         <button @click="toggleShowBooks">
             <span v-if="showBooks">Hide Books</span>
             <!-- <span v-if="!showBooks">Show Books</span> -->
             <span v-else>Show Books</span>
         </button>
-       <div v-show="showBooks">currently showing books</div>     
+       <div v-show="showBooks">currently showing books</div>  
+       <div class="box" @mouseover="">mouseover (enter)</div>   
+       <div class="box">mouseleave</div>   
+       <div class="box">double click</div>   
+       <div class="box"></div>   
     </div>
 </body>
 
