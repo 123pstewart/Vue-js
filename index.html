@@ -19,12 +19,25 @@
 </head>
 <body>
     <h1> hello</h1>
+
     <div id="app">
+
+        <a v-bind:href="url">best website ever</a>
+
+
         <div v-if="showBooks">
-        <p>{{ title }}</p>
+                <ul>
+                    <li v-for="book in books">
+                        <img src="" :alt="book.title">
+                        <h3>{{ book.title }}</h3>
+                        <p>{{ book.author }}</p>
+                    </li>
+                </ul>
+            </div>
+        <!-- <p>{{ title }}</p>
         <p>{{ author }}</p>
-        <p>{{ age }}</p>
-</div>
+        <p>{{ age }}</p> -->
+
         <!-- <button v-on:click="age++">increase age</button>
         <button v-on:click="age--">decrease age</button>
         <button v-on:click="age = 0">reset age</button>
@@ -35,12 +48,13 @@
             <!-- <span v-if="!showBooks">Show Books</span> -->
             <span v-else>Show Books</span>
         </button>
-       <div v-show="showBooks">currently showing books</div>  
-       <div class="box" @mouseover="">mouseover (enter)</div>   
-       <div class="box">mouseleave</div>   
-       <div class="box">double click</div>   
-       <div class="box"></div>   
-    </div>
+       <!-- <div v-show="showBooks">currently showing books</div>  
+       <div class="box" @mouseover="handleEvent($event, 5)">mouseover (enter)</div>   
+       <div class="box" @mouseleave="handleEvent">mouseleave</div>   
+       <div class="box" @dblclick="handleEvent">double click</div>   
+       <div class="box" @mousemove="handleMousemove">position - {{ x }} {{ y }}</div>   
+    </div> -->
+</div>
 </body>
 
 <script src="js/script.js"></script>
